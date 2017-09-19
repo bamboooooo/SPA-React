@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>单页应用</title>
+    <link href="<%=__DEV__ ? '' : '' %><%= htmlWebpackPlugin.files.chunks.main.css[0] %>" rel="stylesheet">
 </head>
 <body>
     <div id="app">1113331</div>
+    <script src="<%=__DEV__ ? '' : '' %><%= htmlWebpackPlugin.files.chunks.vendor.entry %>"></script>
+    <script src="<%=__DEV__ ? '' : '' %><%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>
-</html>
